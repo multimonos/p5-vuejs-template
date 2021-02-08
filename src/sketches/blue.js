@@ -11,8 +11,10 @@ export default p => {
     }
 
     p.draw = () => {
+        p.fill(p.color(0, 0, 255, 8))
+        p.rect(0, 0, p.width, p.height)
         p.fill(0, 0, 255)
-        p.circle(ctr.x, ctr.y, 100)
+        p.circle(p.frameCount, ctr.y, 100)
     }
 
 }
