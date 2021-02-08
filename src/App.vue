@@ -1,24 +1,28 @@
 <template>
-  <div class="App">
-    <p>application</p>
-    <header class="App-header">
-      <router-link :to="{ name: 'home'}">home</router-link>
-      <router-link :to="{ name: 'sketchlist'}">sketches</router-link>
-    </header>
-    <router-view></router-view>
-  </div>
+    <div class="App">
+        <h1>application</h1>
+        <nav class="App-header">
+            <ul>
+                <li>
+                    <router-link :to="{ name: 'home'}">home</router-link>
+                </li>
+                <li>
+                    <router-link :to="{ name: 'sketches'}">sketches</router-link>
+                </li>
+            </ul>
+        </nav>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
 export default {
-  components: {
-
-  },
-  data() {
-    return {
-      message: "Learn Vue"
-    };
-  }
+    components: {},
+    data() {
+        return {
+            message: "Learn Vue"
+        };
+    }
 };
 </script>
 

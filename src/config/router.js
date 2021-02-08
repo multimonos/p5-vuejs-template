@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "./views/Home.vue";
-import SketchList from "./views/SketchList.vue";
+import Home from "../views/Home.vue";
+import SketchLoader from "../views/SketchLoader.vue";
 
 const routes = [
     {path: "/", name: "home", component: Home},
-    {path: "/sketches/:id?", name: "sketchlist", component: SketchList},
+    {path: "/sketches/:id?", name: "sketches", component: SketchLoader},
 ]
 
 const router = createRouter({
