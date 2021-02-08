@@ -18,7 +18,11 @@
         </div>
 
         <div>
-            <sketch v-if="id" :sketch-id="id" :key="key"></sketch>
+            <sketch
+                v-if="id"
+                :sketch-id="id"
+                :key="key"
+            ></sketch>
         </div>
     </div>
 </template>
