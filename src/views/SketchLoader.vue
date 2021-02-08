@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <sketch v-if="id" :sketch-id="id"></sketch>
+            <sketch v-if="id" :sketch-id="id" :key="key"></sketch>
         </div>
     </div>
 </template>
@@ -51,9 +51,9 @@ export default {
         const vm = this
         this.$watch(() => this.$route.params, (toParams, previousParams) => {
                 // console.log(toParams, previousParams)
-            this.id = toParams.id
+                this.id = toParams.id
                 // vm.$set('sketchId', toParams.id)
-            // console.log(vm, Vue)
+                // console.log(vm, Vue)
             }
         )
     },
@@ -66,6 +66,9 @@ export default {
             set(v) {
                 this.sketchId = v
             }
+        },
+        key() {
+            return "sketch-" + this.id
         }
     }
 
