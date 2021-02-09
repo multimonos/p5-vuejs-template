@@ -1,11 +1,12 @@
 <template>
     <div>
-       <div id="sketch" ref="sketch" class="sketch"></div>
+        <div id="sketch" ref="sketch" class="sketch"></div>
     </div>
 </template>
 
 <script>
 import p5 from "p5"
+
 export default {
     name: "Sketch",
 
@@ -16,7 +17,7 @@ export default {
     },
 
     mounted() {
-        this.load(this.sketch, this.$el)
+        this.load(this.sketch, document.getElementById("sketch"))
     },
 
     methods: {
