@@ -1,8 +1,11 @@
 import p5 from 'p5'
+import WindowResized from "./mixin/WindowResized";
 
 export default p => {
 
     let ctr
+
+    Object.assign(p, WindowResized(p))
 
     p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
